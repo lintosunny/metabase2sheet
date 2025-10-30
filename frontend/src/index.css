@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 218 27% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 218 27% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 27% 12%;
+
+    --primary: 16 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 13% 91%;
+    --secondary-foreground: 218 27% 12%;
+
+    --muted: 220 20% 98%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 16 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 16 100% 50%;
+
+    --radius: 1.25rem;
+
+    --gradient-start: 16 100% 50%;
+    --gradient-end: 16 100% 45%;
+    
+    --shadow-soft: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    --shadow-elevated: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-glow: 0 0 20px rgba(255, 74, 0, 0.3);
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  code, pre {
+    font-family: 'Roboto Mono', monospace;
+  }
+}
