@@ -21,4 +21,4 @@ COPY . .
 EXPOSE 8080
 
 # Run the app using uvicorn
-CMD ["uv", "run", "fastapi", "dev", "--port", "8080", "--host", "0.0.0.0"]
+CMD ["uvicorn", "src.services.api:app", "--host", "0.0.0.0", "--port", "8080"]
