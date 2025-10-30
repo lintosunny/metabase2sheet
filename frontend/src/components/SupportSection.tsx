@@ -68,13 +68,13 @@ export const SupportSection = () => {
               <h3 className="text-2xl font-bold mb-6 text-foreground">Get in Touch</h3>
               <div className="space-y-4">
                 <a
-                  href="mailto:linton.sunny@gmail.com"
+                  href="mailto:lintosunny111@gmail.com"
                   className="flex items-center gap-3 text-foreground/80 hover:text-primary transition-colors group"
                 >
                   <div className="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
-                  <span>linton.sunny@gmail.com</span>
+                  <span>lintosunny111@gmail.com</span>
                 </a>
                 <a
                   href="tel:+919876543210"

@@ -276,7 +276,6 @@ setIsLoading(false);
                               <SelectValue placeholder="Select date" />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="D-1">D-1</SelectItem>
                               <SelectItem value="TODAY">TODAY</SelectItem>
                               <SelectItem value="D-1">D-1</SelectItem>
                               <SelectItem value="D-7">D-7</SelectItem>
