@@ -65,7 +65,7 @@ const generateScript = async () => {
     mode, // append or paste
   };
 
-  const response = await fetch("http://127.0.0.1:8000/generate-script", {
+  const response = await fetch("https://metabase2sheet.onrender.com/generate-script", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",

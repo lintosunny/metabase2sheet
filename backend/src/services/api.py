@@ -27,4 +27,4 @@ async def generate_script_api(request: Request):
 
 @app.get("/")
 async def home():
-    return {"message": "Metabase-to-Sheet API running locally 🚀"}
+    return {"message": "Metabase2Sheet API Home"}
