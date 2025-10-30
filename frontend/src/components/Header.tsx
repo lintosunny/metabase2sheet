@@ -11,8 +11,8 @@ import {
 export const Header = () => {
   const handleDownload = (type: string) => {
     const urls = {
-      script: "https://medium.com/@example/how-to-generate-script",
-      automate: "https://medium.com/@example/how-to-automate-sheets",
+      script: "https://medium.com/@lintosunny111/how-to-generate-a-script-using-metabase2sheet-e5d4dc6bdc45",
+      automate: "https://medium.com/@lintosunny111/how-automate-google-sheets-using-appscr-735a55267e79",
       demo: "https://www.youtube.com/watch?v=your-demo-video"
     };
     
