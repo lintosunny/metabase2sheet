@@ -3,14 +3,14 @@ from typing import Dict, List
 DATE_CONSTANTS_JS = {
     "TODAY": 'const TODAY = new Date();',
     "D-1": 'const YESTERDAY = new Date(new Date().setDate(new Date().getDate() - 1));',
-    "D-7": 'const D_7 = new Date(new Date().setDate(new Date().getDate() - 7));',
-    "D-14": 'const D_14 = new Date(new Date().setDate(new Date().getDate() - 14));',
-    "D-31": 'const D_31 = new Date(new Date().setDate(new Date().getDate() - 31));',
-    "D-365": 'const D_365 = new Date(new Date().setDate(new Date().getDate() - 365));',
-    "D+7": 'const D_P7 = new Date(new Date().setDate(new Date().getDate() + 7));',
-    "D+14": 'const D_P14 = new Date(new Date().setDate(new Date().getDate() + 14));',
-    "D+31": 'const D_P31 = new Date(new Date().setDate(new Date().getDate() + 31));',
-    "D+365": 'const D_P365 = new Date(new Date().setDate(new Date().getDate() + 365));',
+    "D-7": 'const D-7 = new Date(new Date().setDate(new Date().getDate() - 7));',
+    "D-14": 'const D-14 = new Date(new Date().setDate(new Date().getDate() - 14));',
+    "D-31": 'const D-31 = new Date(new Date().setDate(new Date().getDate() - 31));',
+    "D-365": 'const D-365 = new Date(new Date().setDate(new Date().getDate() - 365));',
+    "D+7": 'const D+P7 = new Date(new Date().setDate(new Date().getDate() + 7));',
+    "D+14": 'const D+P14 = new Date(new Date().setDate(new Date().getDate() + 14));',
+    "D+31": 'const D+P31 = new Date(new Date().setDate(new Date().getDate() + 31));',
+    "D+365": 'const D+P365 = new Date(new Date().setDate(new Date().getDate() + 365));',
     "CURRENT_MONTH_START": 'const CURRENT_MONTH_START = new Date(new Date().getFullYear(), new Date().getMonth(), 1);',
     "CURRENT_MONTH_END": 'const CURRENT_MONTH_END = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0);',
     "LAST_MONTH_START": 'const LAST_MONTH_START = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 1);',
@@ -59,7 +59,7 @@ if __name__ == "__main__":
         "tabName": "tb",
         "parameters": [
             {"id": "e4b8334b-9f1d-4465-971b-c7da21727d9c", "type": "text", "name": "df", "value": "df"},
-            {"id": "9fb6a4f0-c86a-4040-b117-a4140f5033e9", "type": "date", "name": "df", "value": "D-1"}
+            {"id": "9fb6a4f0-c86a-4040-b117-a4140f5033e9", "type": "date", "name": "df", "value": "D-7"}
         ]
     }
 

@@ -17,11 +17,16 @@ def convert_to_params(payload: Dict) -> str:
         value = param.get("value")
         if not value or str(value).strip() == "":
             continue
-        params.append({
-            "type": param.get("type", ""),
-            "target": ["variable", ["template-tag", param.get("name", "")]],
-            "value": value
-        })
+
+        param_type = param.get("type", "")
+        if param_type == "date":
+            value_str = value  # keep unquoted
+        else:
+            value_str = f'"{value}"'  # quote for text or others
+
+        params.append(
+            f"{{'type':'{param_type}','target':['variable',['template-tag','{param.get('name','')}']],'value':{value_str}}}"
+        )
 
     if not params:
         return "// no params for this query"
