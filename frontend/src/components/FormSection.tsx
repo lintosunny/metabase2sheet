@@ -277,15 +277,15 @@ setIsLoading(false);
                             </SelectTrigger>
                             <SelectContent>
                               <SelectItem value="TODAY">TODAY</SelectItem>
-                              <SelectItem value="D-1">D-1</SelectItem>
-                              <SelectItem value="D-7">D-7</SelectItem>
-                              <SelectItem value="D-14">D-14</SelectItem>
-                              <SelectItem value="D-31">D-31</SelectItem>
-                              <SelectItem value="D-365">D-365</SelectItem>
-                              <SelectItem value="D+7">D+7</SelectItem>
-                              <SelectItem value="D+14">D+14</SelectItem>
-                              <SelectItem value="D+31">D+31</SelectItem>
-                              <SelectItem value="D+365">D+365</SelectItem>
+                              <SelectItem value="D_MINUS_1">D-1</SelectItem>
+                              <SelectItem value="D_MINUS_7">D-7</SelectItem>
+                              <SelectItem value="D_MINUS_14">D-14</SelectItem>
+                              <SelectItem value="D_MINUS_31">D-31</SelectItem>
+                              <SelectItem value="D_MINUS_365">D-365</SelectItem>
+                              <SelectItem value="D_PLUS_7">D+7</SelectItem>
+                              <SelectItem value="D_PLUS_14">D+14</SelectItem>
+                              <SelectItem value="D_PLUS_31">D+31</SelectItem>
+                              <SelectItem value="D_PLUS_365">D+365</SelectItem>
                               <SelectItem value="CURRENT_MONTH_START">CURRENT_MONTH_START</SelectItem>
                               <SelectItem value="CURRENT_MONTH_END">CURRENT_MONTH_END</SelectItem>
                               <SelectItem value="LAST_MONTH_START">LAST_MONTH_START</SelectItem>
