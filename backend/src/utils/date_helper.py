@@ -1,23 +1,24 @@
 from typing import Dict, List
 
 DATE_CONSTANTS_JS = {
-    "TODAY": 'const TODAY = new Date();',
-    "D_MINUS_1": 'const D_MINUS_1 = new Date(new Date().setDate(new Date().getDate() - 1));',
-    "D_MINUS_7": 'const D_MINUS_7 = new Date(new Date().setDate(new Date().getDate() - 7));',
-    "D_MINUS_14": 'const D_MINUS_14 = new Date(new Date().setDate(new Date().getDate() - 14));',
-    "D_MINUS_31": 'const D_MINUS_31 = new Date(new Date().setDate(new Date().getDate() - 31));',
-    "D_MINUS_365": 'const D_MINUS_365 = new Date(new Date().setDate(new Date().getDate() - 365));',
-    "D_PLUS_7": 'const D_PLUS_7 = new Date(new Date().setDate(new Date().getDate() + 7));',
-    "D_PLUS_14": 'const D_PLUS_14 = new Date(new Date().setDate(new Date().getDate() + 14));',
-    "D_PLUS_31": 'const D_PLUS_31 = new Date(new Date().setDate(new Date().getDate() + 31));',
-    "D_PLUS_365": 'const D_PLUS_365 = new Date(new Date().setDate(new Date().getDate() + 365));',
-    "CURRENT_MONTH_START": 'const CURRENT_MONTH_START = new Date(new Date().getFullYear(), new Date().getMonth(), 1);',
-    "CURRENT_MONTH_END": 'const CURRENT_MONTH_END = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0);',
-    "LAST_MONTH_START": 'const LAST_MONTH_START = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 1);',
-    "LAST_MONTH_END": 'const LAST_MONTH_END = new Date(new Date().getFullYear(), new Date().getMonth(), 0);',
-    "SECOND_LAST_MONTH_START": 'const SECOND_LAST_MONTH_START = new Date(new Date().getFullYear(), new Date().getMonth() - 2, 1);',
-    "SECOND_LAST_MONTH_END": 'const SECOND_LAST_MONTH_END = new Date(new Date().getFullYear(), new Date().getMonth() - 1, 0);'
-}
+  "TODAY": 'const TODAY = new Date(new Date().setUTCHours(0, 0, 0, 0));',
+  "D_MINUS_1": 'const D_MINUS_1 = new Date(new Date(new Date().setDate(new Date().getDate() - 1)).setUTCHours(0, 0, 0, 0));',
+  "D_MINUS_7": 'const D_MINUS_7 = new Date(new Date(new Date().setDate(new Date().getDate() - 7)).setUTCHours(0, 0, 0, 0));',
+  "D_MINUS_14": 'const D_MINUS_14 = new Date(new Date(new Date().setDate(new Date().getDate() - 14)).setUTCHours(0, 0, 0, 0));',
+  "D_MINUS_31": 'const D_MINUS_31 = new Date(new Date(new Date().setDate(new Date().getDate() - 31)).setUTCHours(0, 0, 0, 0));',
+  "D_MINUS_365": 'const D_MINUS_365 = new Date(new Date(new Date().setDate(new Date().getDate() - 365)).setUTCHours(0, 0, 0, 0));',
+  "D_PLUS_7": 'const D_PLUS_7 = new Date(new Date(new Date().setDate(new Date().getDate() + 7)).setUTCHours(0, 0, 0, 0));',
+  "D_PLUS_14": 'const D_PLUS_14 = new Date(new Date(new Date().setDate(new Date().getDate() + 14)).setUTCHours(0, 0, 0, 0));',
+  "D_PLUS_31": 'const D_PLUS_31 = new Date(new Date(new Date().setDate(new Date().getDate() + 31)).setUTCHours(0, 0, 0, 0));',
+  "D_PLUS_365": 'const D_PLUS_365 = new Date(new Date(new Date().setDate(new Date().getDate() + 365)).setUTCHours(0, 0, 0, 0));',
+  "CURRENT_MONTH_START": 'const CURRENT_MONTH_START = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), 1));',
+  "CURRENT_MONTH_END": 'const CURRENT_MONTH_END = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth() + 1, 0));',
+  "LAST_MONTH_START": 'const LAST_MONTH_START = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth() - 1, 1));',
+  "LAST_MONTH_END": 'const LAST_MONTH_END = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), 0));',
+  "SECOND_LAST_MONTH_START": 'const SECOND_LAST_MONTH_START = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth() - 2, 1));',
+  "SECOND_LAST_MONTH_END": 'const SECOND_LAST_MONTH_END = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth() - 1, 0));'
+};
+
 
 def get_date_constants(payload: Dict) -> str:
     """Generate JS constant declarations for all date-type parameters."""
@@ -59,7 +60,7 @@ if __name__ == "__main__":
         "tabName": "tb",
         "parameters": [
             {"id": "e4b8334b-9f1d-4465-971b-c7da21727d9c", "type": "text", "name": "df", "value": "df"},
-            {"id": "9fb6a4f0-c86a-4040-b117-a4140f5033e9", "type": "date", "name": "df", "value": "D-7"}
+            {"id": "9fb6a4f0-c86a-4040-b117-a4140f5033e9", "type": "date", "name": "df", "value": "D_MINUS_7"}
         ]
     }
 
