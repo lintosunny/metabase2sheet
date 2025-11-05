@@ -1,5 +1,4 @@
 from pathlib import Path
-from src.utils.date_helper import get_date_constants
 from src.utils.parameter_helper import convert_to_params
 
 # Base directory for templates is relative to this script's location
@@ -43,12 +42,9 @@ def final_script(payload):
     """
     script_body = generate_script(payload)
 
-    date_constants = get_date_constants(payload)
-
     params_block = convert_to_params(payload)
 
     final_script_output = "\n\n".join([
-        date_constants.strip(),
         params_block.strip(),
         script_body.strip()
     ])
@@ -81,7 +77,7 @@ def main():
             "id": "9fb6a4f0-c86a-4040-b117-a4140f5033e9",
             "type": "date",
             "name": "df",
-            "value": "D-2"
+            "value": "D_MINUS_1"
             }
         ]
         }
