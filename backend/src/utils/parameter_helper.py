@@ -49,7 +49,7 @@ def convert_to_params(payload: Dict) -> str:
             formatted_params.append(
                 f"  {{\n"
                 f"    'type': '{p['type']}',\n"
-                f"    'target': ['variable', ['template-tag', '{p['name']}'']],\n"
+                f"    'target': ['variable', ['template-tag', '{p['name']}']],\n"
                 f"    'value': {p['value']}\n"
                 f"  }}"
             )
