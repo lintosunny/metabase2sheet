@@ -31,7 +31,7 @@ function importMetabaseMulti_functionName() {
 }
 
 function fetchMetabaseCardToSheet_functionName(baseUrl, token, cardId, sheetName, numColumns, username, password) {
-  const encodedParams = encodeURIComponent(JSON.stringify(PARAMS));
+  const encodedParams = encodeURIComponent(JSON.stringify(PARAMS_functionName));
   const queryUrl = `${baseUrl}/api/card/${cardId}/query/csv?parameters=${encodedParams}`;
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName);
   Logger.log("Fetching data from Metabase API for card " + cardId + " and sheet " + sheetName + "...");

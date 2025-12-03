@@ -59,7 +59,7 @@ def convert_to_params(payload: Dict) -> str:
                 f"  {{'type':'{p['type']}','target':['variable',['template-tag','{p['name']}']],'value':{p['value']}}}"
             )
 
-    return f"PARAMS = [\n{','.join(formatted_params)}\n];"
+    return f"PARAMS{payload['_functionName']} = [\n{','.join(formatted_params)}\n];"
 
 
 
